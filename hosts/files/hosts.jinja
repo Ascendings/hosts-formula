@@ -3,24 +3,26 @@
 # This file is managed by Salt! Do not edit by hand!
 #
 
-{%- if hosts_settings.localhost %}
+{% if hosts_settings.localhost -%}
 # Localhost IPv4
 127.0.0.1 {%- for hn in hosts_settings.localhost_names %} {{ hn }}{%- endfor %}
 {%- endif %}
 
-{%- if hosts_settings.ip4_hosts is defined %}
-{%- for hn, ip in hosts_settings.ip4_hosts.items() %}
+{% if hosts_settings.ip4_hosts is defined -%}
+# IPv4 hosts
+{% for hn, ip in hosts_settings.ip4_hosts.items() -%}
 {{ ip }}  {{ hn }}
-{%- endfor %}
+{% endfor -%}
 {%- endif %}
 
-{%- if hosts_settings.localhost6 %}
+{% if hosts_settings.localhost6 -%}
 # Localhost IPv6
 ::1 {%- for hn in hosts_settings.localhost6_names %} {{ hn }}{%- endfor %}
 {%- endif %}
 
-{%- if hosts_settings.ip6_hosts is defined %}
-{%- for hn, ip in hosts_settings.ip6_hosts.items() %}
+{% if hosts_settings.ip6_hosts is defined -%}
+# IPv6 hosts
+{% for hn, ip in hosts_settings.ip6_hosts.items() -%}
 {{ ip }}  {{ hn }}
-{%- endfor %}
+{% endfor -%}
 {%- endif %}
