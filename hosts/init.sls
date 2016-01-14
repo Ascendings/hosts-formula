@@ -2,7 +2,7 @@
 
 /etc/hosts:
   file.managed:
-    - source: salt://hosts/templates/hosts.jinja
+    - source: salt://hosts/files/hosts.jinja
     - user: {{ hosts_settings.file_owner }}
     - group: {{ hosts_settings.file_group }}
     - mode: {{ hosts_settings.file_mode }}
