@@ -1,0 +1,23 @@
+hosts:
+  lookup:
+    file_owner: rooter
+    file_owner: rootier
+    file_mode: '0664'
+  
+  localhost: True
+  localhost_names:
+    - localhost
+    - localhost.domain
+  
+  ip4_hosts:
+    host1.example.com: 8.8.8.8
+    host2.example.com: 8.8.4.4
+  
+  localhost6: True
+  localhost6_names:
+    - localhost6
+    - localhost6.domain
+
+  ip6_hosts:
+    host1.example.com: 2001:4860:4860::8888
+    host2.example.com: 2001:4860:4860::8844

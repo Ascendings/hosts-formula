@@ -1,0 +1,21 @@
+hosts:
+  # localhost entry stuff
+  localhost: True
+  localhost_names:
+    - localhost
+  
+  # IPv4 hosts - empty hash
+  ip4_hosts: {}
+  
+  # localhost IPv6 entry
+  localhost6: True
+  localhost6_names:
+    - localhost6
+
+  # IPv6 hosts - empty hash
+  ip6_hosts: {}
+  
+  # file configuration
+  file_owner: root
+  file_group: root
+  file_mode: '0644'
