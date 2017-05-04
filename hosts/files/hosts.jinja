@@ -8,7 +8,7 @@
 127.0.0.1 {%- for hn in hosts_settings.localhost_names %} {{ hn }}{%- endfor %}
 {%- endif %}
 
-{% if hosts_settings.ip4_hosts is defined -%}
+{% if hosts_settings.ip4_hosts -%}
 # IPv4 hosts
 {% for hn, ip in hosts_settings.ip4_hosts.items() -%}
 {{ ip }}  {{ hn }}
@@ -20,7 +20,7 @@
 ::1 {%- for hn in hosts_settings.localhost6_names %} {{ hn }}{%- endfor %}
 {%- endif %}
 
-{% if hosts_settings.ip6_hosts is defined -%}
+{% if hosts_settings.ip6_hosts -%}
 # IPv6 hosts
 {% for hn, ip in hosts_settings.ip6_hosts.items() -%}
 {{ ip }}  {{ hn }}
