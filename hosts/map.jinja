@@ -14,13 +14,13 @@ that differ from whats in defaults.yaml
     'Suse': {},
     'Arch': {},
     'RedHat': {},
-  	'FreeBSD': {
+    'FreeBSD': {
       'file_group': 'wheel',
     },
   },
   grain="os_family",
-  merge=salt['pillar.get']('hosts:lookup'))
-%}
+  merge=salt['pillar.get']('hosts:lookup')
+) %}
 
 {## Merge the flavor_map to the default settings ##}
 {% do default_settings.hosts.update(flavor_map) %}
@@ -29,6 +29,5 @@ that differ from whats in defaults.yaml
 {% set hosts_settings = salt['pillar.get'](
   'hosts',
   default=default_settings.hosts,
-    merge=True
-  )
-%}
+  merge=True
+) %}
